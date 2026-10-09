@@ -23,13 +23,20 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual Environment
+# Virtual Environment & Cache
 .uv/
+.pytest_cache/
 
-# IDE
+# IDE & Editor
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Ignore generated Word docs (keep master template)
+*.docx
+!template.docx
