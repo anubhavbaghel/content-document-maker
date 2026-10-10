@@ -1,5 +1,5 @@
 """
-streamlit_app.py — Streamlit Web Application for CCT Document Creator Studio
+streamlit_app.py - Streamlit Web Application for Document Creator Studio
 Can be run locally or deployed for free with 1 click to Streamlit Community Cloud.
 """
 
@@ -14,8 +14,7 @@ import streamlit as st
 from fill_template import build_document
 
 st.set_page_config(
-    page_title="CCT Document Creator Studio",
-    page_icon="📄",
+    page_title="Document Creator Studio",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -24,11 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent
 DEFAULT_TEMPLATE_PATH = BASE_DIR / "template.docx"
 
 # Header
-st.title("📄 CCT Document Creator Studio")
-st.markdown("Generate fully formatted, high-quality **Content Creation Template (CCT)** Word documents from JSON packages in seconds.")
+st.title("Document Creator Studio")
+st.markdown("Generate fully formatted, high-quality Word documents from JSON packages in seconds.")
 
 with st.sidebar:
-    st.header("⚙️ Configuration")
+    st.header("Configuration")
     
     # Template Selection
     template_option = st.radio(
@@ -42,20 +41,20 @@ with st.sidebar:
         custom_template_file = st.file_uploader("Upload .docx Template", type=["docx"])
     else:
         if DEFAULT_TEMPLATE_PATH.exists():
-            st.success("✅ Default master template loaded")
+            st.success("Default master template loaded")
             with open(DEFAULT_TEMPLATE_PATH, "rb") as f:
                 st.download_button(
-                    "📥 Download Master Template",
+                    "Download Master Template",
                     data=f.read(),
                     file_name="master_template.docx",
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                 )
         else:
-            st.warning("⚠️ Default template.docx not found.")
+            st.warning("Default template.docx not found.")
 
     st.markdown("---")
-    st.markdown("### 💡 Quick Actions")
-    if st.button("✨ Load Example JSON"):
+    st.markdown("### Quick Actions")
+    if st.button("Load Example JSON"):
         st.session_state["json_input_text"] = json.dumps({
             "pages": [
                 {
@@ -135,7 +134,7 @@ with col1:
             placeholder='{"pages": [{"AIContent": {...}}]}',
         )
 
-    output_filename = st.text_input("Custom Output Filename (Optional)", placeholder="e.g. MyClient_CCT.docx")
+    output_filename = st.text_input("Custom Output Filename (Optional)", placeholder="e.g. MyClient_Document.docx")
 
     # Validate JSON
     if raw_json_str.strip():
@@ -145,9 +144,9 @@ with col1:
                 st.error("JSON is valid, but missing a non-empty 'pages' list.")
                 parsed_data = None
             else:
-                st.success(f"✅ JSON Valid: {len(parsed_data['pages'])} pages detected")
+                st.success(f"JSON Valid: {len(parsed_data['pages'])} pages detected")
         except json.JSONDecodeError as e:
-            st.error(f"❌ Invalid JSON Syntax: {e}")
+            st.error(f"Invalid JSON Syntax: {e}")
             parsed_data = None
 
 with col2:
@@ -171,15 +170,15 @@ with col2:
                 if usps:
                     st.markdown("**USPs:** " + " • ".join(f"`{u}`" for u in usps))
     else:
-        st.info("👈 Upload or paste a JSON package on the left to preview document structure.")
+        st.info("Upload or paste a JSON package on the left to preview document structure.")
 
 # Generation Section
 st.markdown("---")
 gen_col1, gen_col2, gen_col3 = st.columns([1, 2, 1])
 
 with gen_col2:
-    if st.button("🚀 Generate CCT Word Document", type="primary", use_container_width=True, disabled=(parsed_data is None)):
-        temp_dir = tempfile.mkdtemp(prefix="cct_streamlit_")
+    if st.button("Generate Word Document", type="primary", use_container_width=True, disabled=(parsed_data is None)):
+        temp_dir = tempfile.mkdtemp(prefix="doc_streamlit_")
         try:
             with st.spinner("Generating document and stitching pages..."):
                 # Save JSON
@@ -205,22 +204,22 @@ with gen_col2:
                 # Determine download name
                 first_page = parsed_data.get("pages", [{}])[0]
                 meta_title = first_page.get("AIContent", {}).get("meta_data", {}).get("heading", "")
-                safe_name = "Generated_CCT"
+                safe_name = "Generated_Document"
                 if "|" in meta_title:
                     safe_name = meta_title.split("|")[-1].strip().replace(" ", "_")
                 elif first_page.get("PageName"):
                     safe_name = first_page.get("PageName").replace(" ", "_")
 
-                final_name = output_filename.strip() if output_filename.strip() else f"{safe_name}_CCT.docx"
+                final_name = output_filename.strip() if output_filename.strip() else f"{safe_name}.docx"
                 if not final_name.endswith(".docx"):
                     final_name += ".docx"
 
                 with open(output_docx_path, "rb") as f:
                     doc_bytes = f.read()
 
-                st.success("🎉 Document generated successfully!")
+                st.success("Document generated successfully!")
                 st.download_button(
-                    label=f"⬇️ Download {final_name}",
+                    label=f"Download {final_name}",
                     data=doc_bytes,
                     file_name=final_name,
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",

@@ -1,5 +1,5 @@
 """
-app.py — Web Application Server for CCT Document Generator
+app.py - Web Application Server for Document Creator Studio
 Provides an interactive web interface and REST API for generating Word documents from JSON.
 """
 
@@ -19,7 +19,7 @@ from fastapi.staticfiles import StaticFiles
 
 from fill_template import build_document
 
-app = FastAPI(title="CCT Content Creator Studio", version="1.0.0")
+app = FastAPI(title="Document Creator Studio", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -96,7 +96,7 @@ async def preview_content(
             "valid": True,
             "total_pages": len(pages),
             "pages": preview_pages,
-            "company_name": preview_pages[0]["meta_title"].split("|")[-1].strip() if "|" in preview_pages[0]["meta_title"] else "Website CCT",
+            "company_name": preview_pages[0]["meta_title"].split("|")[-1].strip() if "|" in preview_pages[0]["meta_title"] else "Website",
         }
     except json.JSONDecodeError as e:
         raise HTTPException(status_code=400, detail=f"Invalid JSON format: {str(e)}")
@@ -111,7 +111,7 @@ async def generate_document_endpoint(
     template_file: Optional[UploadFile] = File(None),
     output_filename: Optional[str] = Form(None),
 ):
-    temp_dir = tempfile.mkdtemp(prefix="cct_gen_")
+    temp_dir = tempfile.mkdtemp(prefix="doc_gen_")
     try:
         # 1. Resolve JSON content
         raw_json = ""
@@ -157,13 +157,13 @@ async def generate_document_endpoint(
         # Filename calculation
         first_page = parsed_json.get("pages", [{}])[0]
         meta_title = first_page.get("AIContent", {}).get("meta_data", {}).get("heading", "")
-        safe_name = "Website_CCT_Document"
+        safe_name = "Website_Document"
         if "|" in meta_title:
             safe_name = meta_title.split("|")[-1].strip().replace(" ", "_")
         elif first_page.get("PageName"):
             safe_name = first_page.get("PageName").replace(" ", "_")
 
-        download_name = output_filename.strip() if output_filename and output_filename.strip() else f"{safe_name}_CCT.docx"
+        download_name = output_filename.strip() if output_filename and output_filename.strip() else f"{safe_name}.docx"
         if not download_name.endswith(".docx"):
             download_name += ".docx"
 
@@ -191,5 +191,5 @@ app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
 if __name__ == "__main__":
     import uvicorn
-    print("Starting CCT Online Generator on http://127.0.0.1:8000 ...")
+    print("Starting Document Creator Studio on http://127.0.0.1:8000 ...")
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)

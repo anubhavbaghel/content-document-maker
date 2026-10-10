@@ -1,6 +1,6 @@
 @echo off
 echo ===================================================
-echo   Starting CCT Document Creator Studio (Online)
+echo   Starting Document Creator Studio (Online)
 echo ===================================================
 echo.
 echo Opening server at http://localhost:8000 ...

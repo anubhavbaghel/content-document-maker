@@ -69,7 +69,7 @@
         }
       },
       "PageData": {
-        "cct_page_type": "Main page",
+        "page_type": "Main page",
         "page_name": "Home",
         "keywords": "Residential Care Home",
         "instructions": "<p><strong>SQOT:</strong></p><p><strong>-Low staff turnover</strong></p><p><strong>-GOOD CQC RATING</strong></p><p><strong>-Encouraging a sociable environment</strong></p><p><strong>-24 Hour Nursing Care</strong></p><p><strong>-Excellent home cooked, nutritious food and meals.</strong></p><p><strong>-Individualised, person-centred care</strong></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><ul><li>Family-run and independently managed care home in Chertsey.</li><li>Residential and 24-hour nursing care.</li><li>A historic home with more than 250 years of character.</li><li>Providing care since 1965.</li><li>Up to 62 residents.</li><li>En-suite bedrooms.</li><li>Qualified nurses on duty 24 hours a day.</li><li>Person-centred care tailored to each individual.</li><li>Respite, convalescent and day care also available.</li><li>Beautiful landscaped gardens and welcoming communal spaces.</li><li>Home-cooked meals and specialist dietary options.</li><li>Dedicated activities programme.</li><li>Visitors welcome through an open-door policy.</li></ul><p>&nbsp;</p><p>Brochure: https://www.thegrangechertsey.co.uk/brochure/</p><p>&nbsp;</p><p>All stages of elderly care welcome</p>",
@@ -96,7 +96,7 @@
         }
       },
       "PageData": {
-        "cct_page_type": "Main page",
+        "page_type": "Main page",
         "page_name": "Contact",
         "keywords": "Residential care for elderly",
         "instructions": "<p>Location</p><p><strong>The Grange</strong> is situated in the town of Chertsey, at the bottom of the wooded St. Anne's Hill, which has an integral park built into the middle of it. There is a little country pub immediately adjacent and a charming Steak House restaurant just a half a mile away. Thorpe Park is also in the immediate vicinity. Chertsey is 9 miles from Windsor, 5 miles from Weybridge and 6 miles from Ascot.</p><p>&nbsp;</p><p><strong>The Grange Chertsey</strong><br>Ruxbury Road<br>St. Ann's Hill<br>Chertsey<br>Surrey<br>KT16 9EP</p><p>&nbsp;</p><p>Email: info@thegrangechertsey.co.uk</p><p>Social links to include: Linkedin, CQC, Google My Business and Facebook link buttons</p><p>Care home logo widget: https://www.carehome.co.uk/carehome.cfm/searchazref/20001060GRAC</p>",
@@ -164,7 +164,7 @@
         }
       },
       "PageData": {
-        "cct_page_type": "Main page",
+        "page_type": "Main page",
         "page_name": "Life at The Grange Retirement Home",
         "keywords": "Family run care home",
         "instructions": "<p><strong>SQOT:</strong></p><p><strong>-Low staff turnover</strong></p><p><strong>-GOOD CQC RATING</strong></p><p><strong>-Encouraging a sociable environment</strong></p><p><strong>-24 Hour Nursing Care</strong></p><p><strong>-Excellent home cooked, nutritious food and meals.</strong></p><p><strong>-Individualised, person-centred care</strong></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Activities &amp; stimulation</p><ul><li>Dedicated Activities Coordinator.</li><li>Craft activities.</li><li>Exercise sessions.</li><li>Musical afternoons.</li><li>Reminiscence activities.</li><li>Use of photographs and memorabilia to encourage conversation and memories.</li><li>Opportunities for residents to continue social interests.</li><li>Strong connection with the local community.</li></ul><p>Gardens &amp; outdoor space</p><ul><li>Secluded landscaped gardens.</li><li>Flower beds.</li><li>Benches and quiet areas.</li><li>Space for residents to stroll, sit and relax.</li></ul><p>Food &amp; dining</p><ul><li>Nutritious and varied menus.</li><li>Fresh local produce wherever possible.</li><li>Home-cooked food.</li><li>Special dietary requirements catered for.</li><li>Meals served in the dining room or in residents' rooms where preferred.</li></ul><p>Wellbeing</p><ul><li>Holistic approach to care.</li><li>Attention to social, cultural, religious, spiritual and psychological needs.</li><li>Support for maintaining independence.</li><li>Regular visiting healthcare and wellbeing professionals.</li></ul>",
@@ -232,7 +232,7 @@
         }
       },
       "PageData": {
-        "cct_page_type": "Main page",
+        "page_type": "Main page",
         "page_name": "Residential Care",
         "keywords": "Residential care services",
         "instructions": "<p><strong>SQOT:</strong></p><p><strong>-Low staff turnover</strong></p><p><strong>-GOOD CQC RATING</strong></p><p><strong>-Encouraging a sociable environment</strong></p><p><strong>-24 Hour Nursing Care</strong></p><p><strong>-Excellent home cooked, nutritious food and meals.</strong></p><p><strong>-Individualised, person-centred care</strong></p><p><strong>-Respect for privacy, dignity and personal choice.</strong></p><p>&nbsp;</p><ul><li>Residential care for older people who require support with day-to-day living.</li><li>Individual care plans tailored around personal needs and preferences.</li><li>Encouragement of independence wherever possible.</li><li>Respect for privacy, dignity and personal choice.</li><li>Warm, homely surroundings.</li><li>En-suite accommodation.</li><li>Access to activities, gardens and communal areas.</li><li>Home-cooked meals and support with dietary requirements.</li><li>Visiting professionals and healthcare services available.</li><li>Family and friends encouraged to remain closely involved.</li></ul>",
@@ -300,7 +300,7 @@
         }
       },
       "PageData": {
-        "cct_page_type": "Main page",
+        "page_type": "Main page",
         "page_name": "24 Hour Nursing Care",
         "keywords": "24 hour residential nursing home care",
         "instructions": "<ul><li>Qualified nursing staff on duty 24 hours a day.</li><li>Individualised nursing and care plans.</li><li>Support tailored to changing care requirements.</li><li>Experienced and carefully selected care team.</li><li>Ongoing staff training.</li><li>Senior nursing staff and management available to discuss individual requirements.</li><li>Holistic approach addressing physical, social, cultural, spiritual and psychological needs.</li><li>Professional support within a welcoming residential environment.</li></ul><p>The Grange states that qualified nursing staff are on duty around the clock and that care plans are individually tailored to residents' needs.</p>",
@@ -368,7 +368,7 @@
         }
       },
       "PageData": {
-        "cct_page_type": "Main page",
+        "page_type": "Main page",
         "page_name": "Care Home Facilities",
         "keywords": "Excellent rated care home facilities",
         "instructions": "<ul><li>En-suite bedrooms.</li><li>Passenger lifts.</li><li>Hoists.</li><li>Specialist baths on every floor.</li><li>Landscaped gardens.</li><li>Communal areas.</li><li>Library.</li><li>Dining room.</li><li>Own transport.</li><li>Activities programme.</li></ul><p>&nbsp;</p><p>Appointment assistance:</p><ul><li>Visiting optician.</li><li>Hairdresser.</li><li>Chiropodist.</li><li>Physiotherapist.</li><li>Dentist.</li><li>Local doctors.</li><li>Support for religious requirements.</li><li>Home-cooked meals.</li><li>Specialist dietary provision.</li></ul>",

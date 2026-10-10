@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fill_template.py — populate a website-copy CCT (Content Creation Template)
+fill_template.py - populate a website-copy
 Word document from a "generated_content.json" package.
 
 USAGE:

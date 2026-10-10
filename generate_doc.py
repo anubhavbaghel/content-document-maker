@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-generate_cct.py — Generates a standard CCT (Content Creation Template) Word document
+generate_doc.py - Generates a standard Word document
 directly from content.json, with full typography, styled header tables, USP tables,
 dynamic service blocks, FAQs, and CTA callouts.
 """
@@ -533,4 +533,4 @@ def generate_document(json_path, output_path):
 
 
 if __name__ == "__main__":
-    generate_document("content.json", "The_Grange_Retirement_Home_CCT.docx")
+    generate_document("content.json", "The_Grange_Retirement_Home_Document.docx")
