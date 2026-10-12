@@ -2,6 +2,8 @@
 
 Automated tool and web application for generating website Word documents (`.docx`) from structured JSON packages (`content.json`).
 
+**Live Web App:** [https://content-document-maker.streamlit.app/](https://content-document-maker.streamlit.app/)
+
 ---
 
 ## Features
